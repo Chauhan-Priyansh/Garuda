@@ -1,0 +1,497 @@
+/* 🎨 Enhanced Theme & Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@700;900&family=Fira+Code:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+    --bg-color-light: #f5f7fa;
+    --text-color-light: #2c3e50;
+    --heading-color-light: #1a252f;
+    --link-color-light: #3498db;
+    --code-bg-light: #ecf0f1;
+    --code-text-light: #e74c3c;
+    --button-bg-light: #2980b9;
+
+    --bg-color-dark: #1e272e;
+    --text-color-dark: #dcdde1;
+    --heading-color-dark: #f5f6fa;
+    --link-color-dark: #4aa3df;
+    --code-bg-dark: #2f3640;
+    --code-text-dark: #e84118;
+    --button-bg-dark: #40739e;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: var(--bg-color-light);
+    color: var(--text-color-light);
+    margin: 0;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+[data-theme="dark"] {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --heading-color: var(--heading-color-dark);
+    --link-color: var(--link-color-dark);
+    --code-bg: var(--code-bg-dark);
+    --code-text: var(--code-text-dark);
+    --button-bg: var(--button-bg-dark);
+}
+
+/* 🏷️ Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color, var(--heading-color-light));
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 2.8em;
+    border-bottom: 3px solid var(--heading-color, var(--heading-color-light));
+    padding-bottom: 12px;
+}
+
+h2 { font-size: 2.2em; margin-top: 30px; }
+h3 { font-size: 1.9em; }
+h4 { font-size: 1.6em; }
+h5 { font-size: 1.4em; }
+h6 { font-size: 1.2em; color: var(--link-color, var(--link-color-light)); }
+
+/* 📝 Paragraphs */
+p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    font-family: 'Inter', sans-serif;
+}
+
+/* 🔗 Links */
+a {
+    color: var(--link-color, var(--link-color-light));
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 📋 Lists */
+ul, ol {
+    margin-left: 25px;
+}
+
+ul li, ol li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+/* 🗨️ Blockquotes */
+blockquote {
+    border-left: 5px solid var(--link-color, var(--link-color-light));
+    padding-left: 18px;
+    font-style: italic;
+    color: var(--heading-color, var(--heading-color-light));
+    background: rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ⌨️ Code Blocks */
+pre {
+    background: var(--code-bg, var(--code-bg-light));
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    position: relative;
+    border: 1px solid #30363d;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+    color: var(--code-text, var(--code-text-light));
+    background: var(--code-bg, var(--code-bg-light));
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+/* 📊 Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid var(--heading-color, var(--heading-color-light));
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: var(--heading-color, var(--heading-color-light));
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 🌑 Modern Bash Code Block */
+pre code.language-bash {
+    background: #0d1117; /* Deep dark background */
+    color: #e6edf3; /* Softer white text */
+    padding: 16px;
+    display: block;
+    border-radius: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    position: relative;
+    border: 1px solid #30363d;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🏷️ Grey Bash Label */
+pre code.language-bash::before {
+    content: "BASH";
+    display: block;
+    color: #8b949e;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    position: absolute;
+    top: -20px;
+    left: 12px;
+    border-radius: 4px;
+}
+
+/* 📋 Copy Code Button */
+.copy-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #238636; /* GitHub-style green */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-family: "Poppins", sans-serif;
+    opacity: 0; /* Hide button by default */
+}
+
+/* Show button on hover */
+pre:hover .copy-btn {
+    opacity: 1;
+}
+
+/* Copy button hover effect */
+.copy-btn:hover {
+    background: #2ea043;
+}
+
+/* ✅ Tooltip Effect */
+.copy-btn::after {
+    content: "Copy";
+    position: absolute;
+    top: -28px;
+    right: 50%;
+    transform: translateX(50%);
+    background: #30363d;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+/* Show tooltip on hover */
+.copy-btn:hover::after {
+    opacity: 1;
+}
+
+
+/* 🎛️ Theme Switcher Button */
+.theme-switcher {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: var(--button-bg, var(--button-bg-light));
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Inter', sans-serif;
+}
+
+.theme-switcher:hover {
+    opacity: 0.85;
+}
+
+.underline-5 {
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+.underline-8 {
+    text-decoration: underline;
+    text-decoration-thickness: 8px;
+}
+/* 📦 Code Container */
+pre[class*="language-"] {
+    position: relative;
+    background: var(--code-bg, var(--code-bg-light));
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    border: 1px solid #30363d;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+}
+
+/* Language Header */
+pre[class*="language-"]::before {
+    content: attr(data-language);
+    display: block;
+    color: #8b949e;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--heading-color, var(--heading-color-light));
+    color: hsl(0, 0%, 0%);
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+pre code.language-python::before {
+    content: "Python";  /* ✅ Corrected */
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8b949e;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    position: absolute;
+    top: -20px;
+    left: 12px;
+    border-radius: 4px;
+}
+
+/* 🏷️ Language Label for Makefile */
+pre code.language-makefile::before {
+    content: "Makefile";  /* ✅ Corrected */
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: hwb(0 0% 100%);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    position: absolute;
+    top: -20px;
+    left: 12px;
+    border-radius: 4px;
+}
+
+ /* 🎨 Dark Theme for Python */
+pre code.language-python {
+    background: #0d1117; /* Same dark background as Bash */
+    color: #e6edf3; /* Softer white text */
+    padding: 16px;
+    display: block;
+    border-radius: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    position: relative;
+    border: 1px solid #30363d;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🎨 Dark Theme for Makefile */
+pre code.language-makefile {
+    background: #0d1117; /* Same dark background as Bash */
+    color: #e6edf3; /* Softer white text */
+    padding: 16px;
+    display: block;
+    border-radius: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    position: relative;
+    border: 1px solid #30363d;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+/* 🎨 Dark Theme for Plaintext */
+pre code.language-plaintext {
+    background: #0d1117; /* Dark background */
+    color: #e6edf3; /* Light text */
+    padding: 16px;
+    display: block;
+    border-radius: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    position: relative;
+    border: 1px solid #30363d;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🏷️ Language Label for Plaintext */
+pre code.language-plaintext::before {
+    content: "Plaintext";
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8b949e;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    position: absolute;
+    top: -20px;
+    left: 12px;
+    border-radius: 4px;
+}
+/* 🎨 Dark Theme for C Code */
+pre code.language-c {
+    background: #0d1117; /* Dark background */
+    color: #e6edf3; /* Light text */
+    padding: 16px;
+    display: block;
+    border-radius: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    position: relative;
+    border: 1px solid #30363d;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🏷️ Language Label for C */
+pre code.language-c::before {
+    content: "C";
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8b949e;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    position: absolute;
+    top: -20px;
+    left: 12px;
+    border-radius: 4px;
+}
+
+/* Base blockquote styling */
+blockquote {
+    font-family: "Georgia", serif;
+    font-size: 1.1em;
+    font-style: italic;
+    color: #333;
+    padding: 12px 20px;
+    margin: 15px 0;
+    border-left: 4px solid #555;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Nested blockquote */
+blockquote blockquote {
+    border-left: 3px solid #888;
+    background: #f3f3f3;
+    padding: 10px 18px;
+    margin-top: 10px;
+}
+
+/* Optional: Slight shadow for depth */
+blockquote {
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    border: none;
+    height: 5px;
+    background-color: black;
+    margin: 20px 0; /* Adjust margin as needed */
+}
+
+/* Style for double hyphens (--) */
+.double-hyphen-space {
+    display: block; /* Ensure it behaves like a block element */
+    margin: 1em 0; /* Add vertical space */
+    width: 100%; /* Take full width if desired */
+}
+/* 🎨 Dark Theme for C Code */
+pre code.language-powershell {
+    background: #0d1117; /* Dark background */
+    color: #e6edf3; /* Light text */
+    padding: 16px;
+    display: block;
+    border-radius: 12px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    position: relative;
+    border: 1px solid #30363d;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🏷️ Language Label for C */
+pre code.language-powershell::before {
+    content: "Powershell";
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8b949e;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    position: absolute;
+    top: -20px;
+    left: 12px;
+    border-radius: 4px;
+}
+

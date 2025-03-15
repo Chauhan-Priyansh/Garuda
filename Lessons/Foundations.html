@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Phase 2 &ast;&ast;&#x1f480; Installing Kali Linux&ast;&ast;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <link rel="stylesheet" href="style.css">
+<h1 id="phase-2--installing-kali-linux">Phase 2 <strong>💀 Installing Kali Linux</strong></h1>
+<p><em><strong>Now that we’ve covered hardware selection, let's move on to installing Kali Linux.</strong></em></p>
+<h2 id="21-choose-your-installation-method">2.1 Choose Your Installation Method</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Installation Method</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Recommended For</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Virtual Machine (VM)</strong></td>
+<td>Run Kali inside Windows/Mac</td>
+<td>Beginners &amp; Testing</td>
+</tr>
+<tr>
+<td><strong>Dual Boot</strong></td>
+<td>Install Kali alongside Windows</td>
+<td>Intermediate Users</td>
+</tr>
+<tr>
+<td><strong>Bare Metal</strong></td>
+<td>Full Kali Linux Installation</td>
+<td>Advanced Users</td>
+</tr>
+<tr>
+<td><strong>Live USB with Persistence</strong></td>
+<td>Boot from USB &amp; save data</td>
+<td>Portable Hacking</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>✔ Recommendation: Start with a VM (Virtual Machine) to practice, then move to dual boot or full installation.</strong></em></p>
+<h2 id="22-setting-up-kali-linux-on-a-virtual-machine-vm">2.2 Setting Up Kali Linux on a Virtual Machine (VM)</h2>
+<h3 id="step-1--download-required-files">Step 1 : Download Required Files</h3>
+<ul>
+<li><strong>Kali Linux ISO</strong>: <a href="https://www.kali.org/get-kali/#kali-installer-images">Download Kali Linux ISO</a></li>
+<li><strong>VirtualBox</strong>: <a href="https://www.virtualbox.org/wiki/Downloads">Download VirtualBox</a></li>
+<li><strong>VMware</strong>: <a href="https://www.vmware.com/products/workstation-player.html">Download VMware Workstation Player</a></li>
+</ul>
+<h3 id="step-2--install-virtualbox--create-a-vm">Step 2 : Install VirtualBox &amp; Create a VM</h3>
+<h3 id="create-a-virtual-machine">Create a Virtual Machine</h3>
+<ul>
+<li>Open VirtualBox and click <strong>New</strong></li>
+<li>Name it &quot;Kali Linux&quot; and select <strong>Type:</strong> Linux, <strong>Version:</strong> Debian (64-bit)</li>
+<li>Allocate <strong>4GB+ RAM</strong> and <strong>2+ CPU Cores</strong></li>
+<li>Create a <strong>20GB+ Virtual Hard Disk</strong> (<strong>VDI format, Dynamically Allocated</strong>)</li>
+<li>Select the <strong>Kali Linux ISO</strong> as the boot disk</li>
+</ul>
+<hr>
+<h3 id="step-3-start-kali-linux-installation">Step 3: Start Kali Linux Installation</h3>
+<ul>
+<li>Start the VM and select <strong>Graphical Install</strong></li>
+<li>Set up <strong>language, region, and keyboard</strong></li>
+<li>Configure <strong>hostname</strong> (e.g., &quot;kali&quot;)</li>
+<li>Set up <strong>username and password</strong></li>
+<li>Choose <strong>Guided – Use Entire Disk</strong> (for VM)</li>
+<li>Complete the installation and <strong>reboot</strong></li>
+</ul>
+<hr>
+<h3 id="step-4-install-guest-additions-optional-for-better-performance">Step 4: Install Guest Additions (Optional for Better Performance)</h3>
+<ul>
+<li>Insert <strong>Guest Additions CD</strong> (<em>Devices → Insert Guest Additions CD</em>)</li>
+<li>Open terminal and run:</li>
+</ul>
+<pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt install -y virtualbox-guest-x11
+reboot
+</code></pre>
+<h2 id="the-difference-between-knowing-and-mastering-starts-here-are-you-in">The difference between knowing and mastering starts here. Are you in?</h2>
+<p><a href="next-step.html">→ Continue to the Next Step</a></p>
+
+            
+            
+        </body>
+        </html>

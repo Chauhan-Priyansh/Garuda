@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x1f534; Phase 6&colon; &ast;&ast;Setting Up a Test Lab &lpar;Safe Hacking Environment&rpar;&ast;&ast;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <link rel="stylesheet" href="style.css">
+<p><strong>🔥 Now we’re moving into Advanced Hacking Techniques! Get ready to go deeper into penetration testing, social engineering, and privilege escalation. 🚀</strong></p>
+<h1 id="-phase-6-setting-up-a-test-lab-safe-hacking-environment">🔴 Phase 6: <strong>Setting Up a Test Lab (Safe Hacking Environment)</strong></h1>
+<h4 id="before-we-start-real-world-attacks-we-need-a-test-environment-where-you-can-practice-safely"><strong>Before we start real-world attacks, we need a test environment where you can practice safely</strong></h4>
+<hr>
+<h2 id="️-install-metasploitable-vulnerable-machine-for-hacking-practice">🛠️ Install Metasploitable (Vulnerable Machine for Hacking Practice)</h2>
+<p><strong>Metasploitable is a purposely vulnerable machine used for penetration testing practice.</strong></p>
+<h3 id="step-1-download-metasploitable-2">Step 1: Download Metasploitable 2</h3>
+<p><a href="https://metasploit.help.rapid7.com/docs/metasploitable-2"><strong>Download from Official Source</strong></a></p>
+<h4 id="step2-set-up-in-virtualbox">Step2: Set Up in VirtualBox</h4>
+<ul>
+<li>1.Open VirtualBox, click New → Name it &quot;Metasploitable&quot;</li>
+<li>2.Select Linux → Ubuntu (64-bit)</li>
+<li>3.Allocate 2GB RAM and 1 CPU</li>
+<li>4.Use Existing VDI → Select the Metasploitable .vmdk file</li>
+<li>5.Start the VM and login:</li>
+</ul>
+<pre><code class="language-makefile"><span class="hljs-section">Username: msfadmin  </span>
+<span class="hljs-section">Password: msfadmin  </span>
+</code></pre>
+<h4 id="now-you-have-a-vulnerable-machine-to-attack-safely"><strong>Now you have a vulnerable machine to attack safely!</strong></h4>
+<hr>
+<h1 id="phase-7-privilege-escalation--gaining-root-access">Phase 7: <strong>Privilege Escalation – Gaining Root Access</strong></h1>
+<h4 id="-privilege-escalation-is-used-to-gain-higher-level-access-on-a-compromised-system"><strong>✔ Privilege escalation is used to gain higher-level access on a compromised system.</strong></h4>
+<hr>
+<h2 id="-scenario-exploiting-a-linux-machine-for-root-access">🎯 Scenario: Exploiting a Linux Machine for Root Access</h2>
+<blockquote>
+<h3 id="️-tools-used"><strong>🛠️ Tools Used:</strong></h3>
+<blockquote>
+<ul>
+<li><strong>LinPEAS</strong></li>
+<li><strong>GTFOBins</strong></li>
+<li><strong>Sudo Exploits</strong></li>
+</ul>
+</blockquote>
+</blockquote>
+<h4 id="step-1-check-user-privileges">Step 1: Check User Privileges</h4>
+<p><strong>Run:</strong></p>
+<pre><code class="language-bash"><span class="hljs-built_in">whoami</span> &amp;&amp; <span class="hljs-built_in">id</span>
+</code></pre>
+<h4 id="-this-tells-you-your-current-access-level"><strong>✔ This tells you your current access level.</strong></h4>
+<hr>
+<h4 id="step-2-search-for-sudo-permissions">Step 2: Search for Sudo Permissions</h4>
+<pre><code class="language-bash">sudo -l
+</code></pre>
+<h5 id="-if-a-program-runs-as-root-without-a-password-exploit-it"><strong>✔ If a program runs as root without a password, exploit it!</strong></h5>
+<hr>
+<h4 id="step-3-exploit-a-misconfigured-program">Step 3: Exploit a Misconfigured Program</h4>
+<p><strong>Example: If vim can be run as root:</strong></p>
+<pre><code class="language-bash">sudo vim -c <span class="hljs-string">&#x27;:!bash&#x27;</span>
+</code></pre>
+<h4 id="-boom-you-have-a-root-shell-"><strong>✔ Boom! You have a root shell! 🔥</strong></h4>
+<hr>
+<h1 id="-phase-8-social-engineering--phishing-attacks">🔴 Phase 8: <strong>Social Engineering &amp; Phishing Attacks</strong></h1>
+<h2 id="-scenario-creating-a-fake-login-page-for-credential-stealing">🎯 Scenario: Creating a Fake Login Page for Credential Stealing</h2>
+<blockquote>
+<h3 id="️-tools-used-1"><strong>🛠️ Tools Used:</strong></h3>
+<blockquote>
+<ul>
+<li><strong>Social Engineering Toolkit (SET)</strong></li>
+</ul>
+</blockquote>
+</blockquote>
+<h4 id="step-1-install-set">Step 1: Install SET</h4>
+<pre><code class="language-bash">sudo apt install -y <span class="hljs-built_in">set</span>
+</code></pre>
+<h4 id="step-2-run-set">Step 2: Run SET</h4>
+<pre><code class="language-bash">sudo setoolkit
+</code></pre>
+<h4 id="step-3-create-a-phishing-page">Step 3: Create a Phishing Page</h4>
+<p><strong>1. Choose Social-Engineering Attacks</strong></p>
+<p><strong>2. Select Website Attack Vectors</strong></p>
+<p><strong>3. Pick Credential Harvester Attack</strong></p>
+<p><strong>4. Enter the website (e.g., <a href="https://facebook.com">https://facebook.com</a>)</strong></p>
+<hr>
+<p><strong>✔ Now, when the target enters their login info, you steal the credentials! 🔥</strong></p>
+
+            
+            
+        </body>
+        </html>

